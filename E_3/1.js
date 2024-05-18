@@ -4,3 +4,11 @@ function funcName() {
 }
 
 funcName();
+
+function func(){
+    // code
+    console.log(1+2)
+}
+
+func();
+
