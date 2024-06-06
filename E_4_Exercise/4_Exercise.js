@@ -1,6 +1,6 @@
 function ElectAppliances(){
     this.power = 0;
-    this.powerOnOf = function(){
+    this.isPoweredOn = function(){
         return this.power;
     }
 }
@@ -13,7 +13,7 @@ function DeskLamp(name, color, baseType, outputLight, power, powerOn){
     this.outputLight = outputLight
     this.voltage = '220v'
     this.power = power
-    this.powerOnOf = powerOn
+    this.isPoweredOn = powerOn
 }
 
 function ElectricKettle(name, color, volume, power, powerOn){
@@ -22,7 +22,7 @@ function ElectricKettle(name, color, volume, power, powerOn){
     this.color = color
     this.volume = volume
     this.power = power
-    this.powerOnOf = powerOn
+    this.isPoweredOn = powerOn
 }
 
 function TV(name, color, diagonal, matrixType, power, powerOn){
@@ -32,7 +32,7 @@ function TV(name, color, diagonal, matrixType, power, powerOn){
     this.diagonal = diagonal
     this.matrixType = matrixType
     this.power = power
-    this.powerOnOf = powerOn
+    this.isPoweredOn = powerOn
 }
 
 DeskLamp.prototype = new ElectAppliances();
@@ -42,7 +42,7 @@ TV.prototype = new ElectAppliances();
 function sumPowerOn(...devices){
     let sumPower = 0;
     devices.forEach(device => {
-        if (device.powerOnOf === true){
+        if (device.isPoweredOn === true){
             sumPower += device.power;
         }
     });
@@ -58,3 +58,31 @@ console.log(borc);
 console.log(lg);
 const sumPower = sumPowerOn(tulip, borc, lg);
 console.log(`Total power of all included devices: ${sumPower} w`);
+
+// Реализовать следующее консольное приложение подобно примеру, который
+// разбирался в видео. Реализуйте его на прототипах.
+
+// Определить иерархию электроприборов. Включить некоторые в розетку.
+// Посчитать потребляемую мощность.
+
+// Таких приборов должно быть, как минимум, два (например, настольная лампа
+// и компьютер). Выбрав прибор, подумайте, какими свойствами он обладает.
+
+// План:
+// 1.Определить родительскую функцию с методами, которые включают/выключают
+//      прибор из розетки.
+// 2.Создать делегирующую связь [[Prototype]] для двух конкретных приборов.
+// 3.У каждого из приборов должны быть собственные свойства и, желательно,
+//      методы, отличные от родительских методов.
+// 4.Создать экземпляры каждого прибора.
+// 5.Вывести в консоль и посмотреть результаты работы, гордиться собой. :)
+
+// Общие требования:
+//
+// 1.Имена функций, свойств и методов должны быть информативными.
+// 2.Соблюдать best practices:
+//   • использование camelCase нотации для переменных и методов, PascalCase для названия функций-конструкторов и классов;
+//   • информативные имена (а не a, b);
+//   • четкая связь между классом и его экземплярами (класс описывает
+//      множество, а экземпляр конкретную реализацию);
+//   • использование синтаксиса ES6 (кроме функции-конструкторов) и т. д.
