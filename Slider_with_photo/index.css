@@ -1,0 +1,12 @@
+body {
+  background-color: #cfd3d3;
+}
+
+.image {
+  background-image: url("https://besthqwallpapers.com/Uploads/11-4-2018/47992/dark-gray-fluffy-cat-bokeh-domestic-cat-cute-animals-breed-of-fluffy-cats.jpg");
+  background-size: cover;
+  width:500px;
+  height: 400px;
+  /*width: 300px;*/
+  /*height: 200px;*/
+}
