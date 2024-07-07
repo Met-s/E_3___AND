@@ -1,0 +1,20 @@
+a {
+    color: #315efb;
+}
+
+a:visited {
+color: red;
+}
+
+#picture {
+    color: chartreuse;
+}
+.home {
+    color: #80D0C7;
+}
+img {
+    color: coral;
+}
+body {
+    background-color: #071A71;
+}

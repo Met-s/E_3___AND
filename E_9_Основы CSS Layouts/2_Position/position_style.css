@@ -1,0 +1,38 @@
+/*position: relative;*/
+/*div {*/
+/*    display: inline-block;*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*}*/
+/*.red {*/
+/*    background-color: red;*/
+/*    position: relative;*/
+/*    top: 150px;*/
+/*    left: 20px;*/
+/*}*/
+/*.yellow {*/
+/*    background-color: yellow;*/
+/*}*/
+/*.blue {*/
+/*    background-color: blue;*/
+/*}*/
+
+
+/*position: fixed;*/
+div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  }
+.red {
+  background-color: red;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  }
+.yellow {
+  background-color: yellow;
+  }
+.blue {
+  background-color: blue;
+  }
